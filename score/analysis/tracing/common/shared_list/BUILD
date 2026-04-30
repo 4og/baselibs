@@ -23,7 +23,7 @@ cc_library(
         "shared_list.h",
     ],
     features = COMPILER_WARNING_FEATURES,
-    tags = ["FUSA"],
+    tags = ["FUSAabc"],
     visibility = [
         "@score_baselibs//score/analysis:__subpackages__",
     ],

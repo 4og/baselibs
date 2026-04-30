@@ -18,7 +18,7 @@ cc_library(
     hdrs = [
         "saturating_integral.hpp",
     ],
-    tags = ["FUSA"],
+    tags = ["FUSAabc"],
     visibility = [
         "@score_baselibs//score/analysis/tracing:__subpackages__",
     ],
