@@ -63,10 +63,10 @@ jobs:
           sudo apt install -y qemu-user
       - name: Bazel Build
         run: |
-          bazel build --config ${{ matrix.bazel-config }} -- ${{ matrix.bazel-build-target }}
+          bazel build --config ${{ matrix.bazel-config }} --color=yes -- ${{ matrix.bazel-build-target }}
       - name: Bazel Test
         run: |
-          bazel test --config ${{ matrix.bazel-config }} ${{ matrix.bazel-test-extra-flags }} -- ${{ matrix.bazel-test-target }}
+          bazel test --config ${{ matrix.bazel-config }} ${{ matrix.bazel-test-extra-flags }} --color=yes -- ${{ matrix.bazel-test-target }}
       - name: Bazel test integration as module
         if: matrix.bazel-config == 'bl-x86_64-linux'
         run: |
